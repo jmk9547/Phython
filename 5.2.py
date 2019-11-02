@@ -1,22 +1,24 @@
-largest = None
-smallest = None
-while True:
-    num = input("Enter a number: ")
-    if num == "done" : break
-    try : 
-        num = int(num)
-    except :    
-            print('Invalid input')
-            continue
-    if largest is None :
-        largest = num
-    elif num > largest :
-        largest = num
-
-    if smallest is None :
-        smallest = num
-    elif num < smallest :
-        smallest = num
-
-print("Maximum is", largest)
-print("Minimum is", smallest)
+score = input("Enter Score: ")
+fscore = float(score)
+try :
+    if fscore > 1.0 :
+        print("Error") 
+        quit()
+    
+    elif fscore < 0 :
+        print("Error")
+        quit()
+except :
+    print("Error")
+    quit()
+    
+if fscore >= 0.9 :
+    print("A")
+elif fscore >= 0.8 :
+    print("B")
+elif fscore >= 0.7 :
+    print("C")
+elif fscore >= 0.6 :
+    print("D")
+else :
+    print("F")
